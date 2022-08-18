@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import { useParams } from "react-router-dom";
 
-export default class Flower extends Component {
-    render() {
-        return <div>Flower</div>;
-    }
+export default function Flower() {
+    const { id } = useParams();
+    return <div>Flower {id}</div>;
 }
