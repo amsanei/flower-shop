@@ -1,3 +1,5 @@
+import Flower from "./Flower";
+
 export default function FlowersList() {
     const flowers = [
         {
@@ -36,11 +38,7 @@ export default function FlowersList() {
     return (
         <main>
             {flowers.map((flower) => (
-                <div className="flower">
-                    <h1 className="flower-title">{flower.name}</h1>
-                    <p className="flower-desc">{flower.description}</p>
-                    <div className="flower-price">{flower.Price}</div>
-                </div>
+                <Flower flower={flower} />
             ))}
         </main>
     );
