@@ -1,4 +1,4 @@
-import Flower from "./Flower";
+import Flower from "./FlowerItem";
 import { useContext } from "react";
 import FlowerContext from "../context/FlowerContext";
 

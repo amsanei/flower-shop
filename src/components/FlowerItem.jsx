@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Flower(props) {
+export default function FlowerItem(props) {
     const { flower } = props;
     return (
         <div className="flower">

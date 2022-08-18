@@ -33,23 +33,21 @@ const flowers_data = [
 ];
 
 export const FlowerProvider = ({ children }) => {
-    const [flowers, setFlowers] = useState({
-        id: "",
-        imgUrl: "notFound",
-        name: "",
-        Price: 0,
-        inStock: 0,
-        description: "",
-    });
+    const [flowers, setFlowers] = useState([]);
 
     useEffect(() => {
         setFlowers(flowers_data);
     }, []);
 
+    const getFlower = (id) => {
+        return flowers.filter((element) => element.id === id)[0];
+    };
+
     return (
         <FlowerContext.Provider
             value={{
                 flowers,
+                getFlower,
             }}
         >
             {children}
