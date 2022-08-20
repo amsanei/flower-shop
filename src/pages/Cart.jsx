@@ -10,7 +10,11 @@ export default function Cart() {
             <Header />
             <div>
                 {cartItems.map((item) => (
-                    <CartItem flower={item} remove={removeFromCart} />
+                    <CartItem
+                        key={item.id}
+                        flower={item}
+                        remove={removeFromCart}
+                    />
                 ))}
             </div>
         </>

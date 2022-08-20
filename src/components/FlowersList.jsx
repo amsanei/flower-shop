@@ -12,7 +12,7 @@ export default function FlowersList() {
     return (
         <main>
             {flowers.map((flower) => (
-                <Flower flower={flower} />
+                <Flower key={flower.id} flower={flower} />
             ))}
         </main>
     );
