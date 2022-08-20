@@ -4,17 +4,20 @@ import Flower from "./pages/Flower";
 import Checkout from "./pages/Checkout";
 import Cart from "./pages/Cart";
 import { FlowerProvider } from "./context/FlowerContext";
+import { CartProvider } from "./context/CartContext";
 function App() {
     return (
         <FlowerProvider>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/flower/:id" element={<Flower />} />
-                    <Route path="/checkout" element={<Checkout />} />
-                    <Route path="/cart" element={<Cart />} />
-                </Routes>
-            </Router>
+            <CartProvider>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/flower/:id" element={<Flower />} />
+                        <Route path="/checkout" element={<Checkout />} />
+                        <Route path="/cart" element={<Cart />} />
+                    </Routes>
+                </Router>
+            </CartProvider>
         </FlowerProvider>
     );
 }

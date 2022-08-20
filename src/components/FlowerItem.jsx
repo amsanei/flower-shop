@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "./../context/CartContext";
 
 export default function FlowerItem(props) {
     const { flower } = props;
+    const { addToCart } = useContext(CartContext);
     return (
         <div className="flower">
             <h1 className="flower-title">{flower.name}</h1>
