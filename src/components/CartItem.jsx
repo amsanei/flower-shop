@@ -8,7 +8,7 @@ export default function CartItem(props) {
             </Link>
             <p className="flower-desc">{flower.description}</p>
             <div className="flower-price">{flower.Price}</div>
-            <button onClick={() => remove(flower)}>Remove</button>
+            <button onClick={() => remove(flower.id)}>Remove</button>
         </div>
     );
 }

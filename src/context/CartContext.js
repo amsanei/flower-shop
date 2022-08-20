@@ -10,7 +10,7 @@ export const CartProvider = ({ children }) => {
     };
 
     const removeFromCart = (itemId) => {
-        console.log(itemId);
+        setCartItems(cartItems.filter((item) => item.id !== itemId));
     };
 
     return (
