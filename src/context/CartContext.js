@@ -9,7 +9,9 @@ export const CartProvider = ({ children }) => {
         setCartItems([...cartItems, item]);
     };
 
-    const removeFromCart = (itemId) => {};
+    const removeFromCart = (itemId) => {
+        console.log(itemId);
+    };
 
     return (
         <CartContext.Provider
