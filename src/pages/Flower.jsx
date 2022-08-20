@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import FlowerContext from "../context/FlowerContext";
 import { useParams } from "react-router-dom";
-import FlowerItem from "../components/FlowerItem";
+import FlowerDetail from "../components/FlowerDetail";
 import Header from "../components/Header";
 
 export default function Flower() {
@@ -12,7 +12,7 @@ export default function Flower() {
     return (
         <>
             <Header />
-            <FlowerItem flower={flower} />
+            <FlowerDetail flower={flower} />
         </>
     );
 }
