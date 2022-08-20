@@ -10,7 +10,12 @@ export default function FlowerItem(props) {
             <h1 className="flower-title">{flower.name}</h1>
             <p className="flower-desc">{flower.description}</p>
             <div className="flower-price">{flower.Price}</div>
-            <button className="flower-add-to-cart">Add to cart</button>
+            <button
+                className="flower-add-to-cart"
+                onClick={() => addToCart(flower)}
+            >
+                Add to cart
+            </button>
             <Link to={`/flower/${flower.id}`}>More detail</Link>
         </div>
     );

@@ -6,7 +6,7 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (item) => {
-        console.log("you've just called addToCart function");
+        setCartItems([...cartItems, item]);
     };
 
     const removeFromCart = (itemId) => {};

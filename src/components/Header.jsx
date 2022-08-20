@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../context/CartContext";
 
 export default function Header() {
+    const { cartItems } = useContext(CartContext);
     return (
         <header>
             <div className="header-logo">Flower Shop</div>
@@ -14,7 +17,7 @@ export default function Header() {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/Cart">Cart</Link>
+                        <Link to="/Cart">Cart ({cartItems.length})</Link>
                     </li>
                 </ul>
             </div>
