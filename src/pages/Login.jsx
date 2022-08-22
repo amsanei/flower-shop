@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import UserContext from "../context/UserContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
     const [username, setUsername] = useState("");
@@ -49,6 +49,7 @@ export default function Login() {
                 />
                 <input type="submit" value="Login" />
             </form>
+            <Link to="/">Home</Link>
         </div>
     );
 }

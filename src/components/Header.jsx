@@ -19,6 +19,9 @@ export default function Header() {
                     <li>
                         <Link to="/Cart">Cart ({cartItems.length})</Link>
                     </li>
+                    <li>
+                        <Link to="/user-panel">user panel</Link>
+                    </li>
                 </ul>
             </div>
         </header>

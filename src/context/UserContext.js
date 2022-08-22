@@ -20,9 +20,14 @@ export const UserProvider = ({ children }) => {
         setIsLoggedin(true);
     };
 
+    const userLogout = () => {
+        setLoggedinUser({});
+        setIsLoggedin(false);
+    };
+
     return (
         <UserContext.Provider
-            value={{ users, loggedinUser, userLogin, isLoggedin }}
+            value={{ users, loggedinUser, userLogin, isLoggedin, userLogout }}
         >
             {children}
         </UserContext.Provider>
