@@ -6,7 +6,7 @@ export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const { users } = useContext(UserContext);
+    const { users, userLogin } = useContext(UserContext);
 
     const navigate = useNavigate();
 
@@ -23,15 +23,14 @@ export default function Login() {
 
         if (user) {
             if (user.password === password) {
-                navigate("/");
+                userLogin(user.id);
+                navigate("/user-panel");
             } else {
                 alert("wrong password");
             }
         } else {
             alert("username not found");
         }
-
-        console.log(user);
     };
     return (
         <div>

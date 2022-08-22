@@ -7,6 +7,7 @@ import { UserProvider } from "./context/UserContext";
 import { FlowerProvider } from "./context/FlowerContext";
 import { CartProvider } from "./context/CartContext";
 import Login from "./pages/Login";
+import UserPanel from "./pages/UserPanel";
 function App() {
     return (
         <UserProvider>
@@ -19,6 +20,7 @@ function App() {
                             <Route path="/checkout" element={<Checkout />} />
                             <Route path="/cart" element={<Cart />} />
                             <Route path="/login" element={<Login />} />
+                            <Route path="/user-panel" element={<UserPanel />} />
                         </Routes>
                     </Router>
                 </CartProvider>

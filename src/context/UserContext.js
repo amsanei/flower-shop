@@ -12,9 +12,16 @@ export const UserProvider = ({ children }) => {
         },
     ]);
 
+    const [loggedinUser, setLoggedinUser] = useState({});
+
+    const userLogin = (userId) => {
+        setLoggedinUser(users.find((user) => user.id === userId));
+    };
 
     return (
-        <UserContext.Provider value={{users}}>{children}</UserContext.Provider>
+        <UserContext.Provider value={{ users, loggedinUser, userLogin }}>
+            {children}
+        </UserContext.Provider>
     );
 };
 
