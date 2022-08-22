@@ -6,6 +6,7 @@ import Cart from "./pages/Cart";
 import { UserProvider } from "./context/UserContext";
 import { FlowerProvider } from "./context/FlowerContext";
 import { CartProvider } from "./context/CartContext";
+import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import UserPanel from "./pages/UserPanel";
 function App() {
@@ -20,7 +21,15 @@ function App() {
                             <Route path="/checkout" element={<Checkout />} />
                             <Route path="/cart" element={<Cart />} />
                             <Route path="/login" element={<Login />} />
-                            <Route path="/user-panel" element={<UserPanel />} />
+                            <Route
+                                path="/user-panel"
+                                element={<PrivateRoute />}
+                            >
+                                <Route
+                                    path="/user-panel"
+                                    element={<UserPanel />}
+                                />
+                            </Route>
                         </Routes>
                     </Router>
                 </CartProvider>
