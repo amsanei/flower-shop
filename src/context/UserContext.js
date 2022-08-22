@@ -8,11 +8,14 @@ export const UserProvider = ({ children }) => {
             id: "1a2a1a",
             username: "amir",
             password: "amir12345",
-            email: "a@a,ir",
+            email: "a@a.ir",
         },
     ]);
 
+
     return (
-        <UserContext.Provider value={users}>{children}</UserContext.Provider>
+        <UserContext.Provider value={{users}}>{children}</UserContext.Provider>
     );
 };
+
+export default UserContext;
