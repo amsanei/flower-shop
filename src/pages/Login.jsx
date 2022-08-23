@@ -50,6 +50,9 @@ export default function Login() {
                 <input type="submit" value="Login" />
             </form>
             <Link to="/">Home</Link>
+            <div>
+                Don't have a account? <Link to="/sign-up">Sign Up</Link>
+            </div>
         </div>
     );
 }

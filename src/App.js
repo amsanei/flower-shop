@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import UserPanel from "./pages/UserPanel";
 import { SalesProvider } from "./context/SalesContext";
 import UserShopHistory from './pages/UserShopHistory';
+import SignUp from './pages/SignUp';
 function App() {
     return (
         <UserProvider>
@@ -30,6 +31,7 @@ function App() {
                                 />
                                 <Route path="/cart" element={<Cart />} />
                                 <Route path="/login" element={<Login />} />
+                                <Route path="/Sign-up" element={<SignUp />} />
                                 <Route
                                     path="/user-panel"
                                     element={<PrivateRoute />}
