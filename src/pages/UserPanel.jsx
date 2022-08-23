@@ -11,7 +11,10 @@ export default function UserPanel() {
     };
     return (
         <div>
-            <p>logged in as {loggedinUser.username}</p>
+            <p>Hello {loggedinUser.username}</p>
+            <div className="shop-history">
+                <div></div>
+            </div>
             <Link to="/">Home</Link>
             <button onClick={logout}>Logout</button>
         </div>

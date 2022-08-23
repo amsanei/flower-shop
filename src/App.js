@@ -9,30 +9,39 @@ import { CartProvider } from "./context/CartContext";
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import UserPanel from "./pages/UserPanel";
+import { SalesProvider } from "./context/SalesContext";
 function App() {
     return (
         <UserProvider>
             <FlowerProvider>
-                <CartProvider>
-                    <Router>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/flower/:id" element={<Flower />} />
-                            <Route path="/checkout" element={<Checkout />} />
-                            <Route path="/cart" element={<Cart />} />
-                            <Route path="/login" element={<Login />} />
-                            <Route
-                                path="/user-panel"
-                                element={<PrivateRoute />}
-                            >
+                <SalesProvider>
+                    <CartProvider>
+                        <Router>
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route
+                                    path="/flower/:id"
+                                    element={<Flower />}
+                                />
+                                <Route
+                                    path="/checkout"
+                                    element={<Checkout />}
+                                />
+                                <Route path="/cart" element={<Cart />} />
+                                <Route path="/login" element={<Login />} />
                                 <Route
                                     path="/user-panel"
-                                    element={<UserPanel />}
-                                />
-                            </Route>
-                        </Routes>
-                    </Router>
-                </CartProvider>
+                                    element={<PrivateRoute />}
+                                >
+                                    <Route
+                                        path="/user-panel"
+                                        element={<UserPanel />}
+                                    />
+                                </Route>
+                            </Routes>
+                        </Router>
+                    </CartProvider>
+                </SalesProvider>
             </FlowerProvider>
         </UserProvider>
     );
