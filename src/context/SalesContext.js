@@ -6,7 +6,7 @@ export const SalesProvider = ({ children }) => {
     const [salesHistory, setSalesHistory] = useState([
         {
             userId: "1a2a1a",
-            products: [{ id: "agww32", count: 1 }],
+            products: [{ id: "agww32", count: 10 }],
             date: "2022/24/8",
         },
     ]);

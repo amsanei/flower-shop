@@ -1,7 +1,7 @@
 import { useContext } from "react";
+import UserShopHistoryList from "../components/UserShopHistoryList";
 import SalesContext from "../context/SalesContext";
 import UserContext from "../context/UserContext";
-
 
 export default function UserShopHistory() {
     const { loggedinUser } = useContext(UserContext);
@@ -12,7 +12,7 @@ export default function UserShopHistory() {
     return (
         <div>
             {userShopHistory.map((item) => (
-                <div>Date: {item.date}</div>
+                <UserShopHistoryList data={item} />
             ))}
         </div>
     );
