@@ -11,8 +11,12 @@ export const SalesProvider = ({ children }) => {
         },
     ]);
 
+    const getUserShopHistory = (userId) => {
+        return salesHistory.filter((item) => item.userId === userId);
+    };
+
     return (
-        <SalesContext.Provider value={{ salesHistory }}>
+        <SalesContext.Provider value={{ getUserShopHistory }}>
             {children}
         </SalesContext.Provider>
     );
