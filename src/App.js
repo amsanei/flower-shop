@@ -10,6 +10,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import UserPanel from "./pages/UserPanel";
 import { SalesProvider } from "./context/SalesContext";
+import UserShopHistory from './pages/UserShopHistory';
 function App() {
     return (
         <UserProvider>
@@ -36,6 +37,10 @@ function App() {
                                     <Route
                                         path="/user-panel"
                                         element={<UserPanel />}
+                                    />
+                                    <Route
+                                        path="/user-panel/shop-history"
+                                        element={<UserShopHistory />}
                                     />
                                 </Route>
                             </Routes>

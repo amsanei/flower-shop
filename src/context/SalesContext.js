@@ -7,7 +7,7 @@ export const SalesProvider = ({ children }) => {
         {
             userId: "1a2a1a",
             products: [{ id: "agww32", count: 1 }],
-            timeStamp: "2022/24/8",
+            date: "2022/24/8",
         },
     ]);
 
