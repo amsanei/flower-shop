@@ -26,9 +26,28 @@ export const UserProvider = ({ children }) => {
         setIsLoggedin(false);
     };
 
+    const addUser = (userInfo) => {
+        setUsers([
+            ...users,
+            {
+                id: uuidv4(),
+                username: userInfo.username,
+                password: userInfo.password,
+                email: userInfo.email,
+            },
+        ]);
+    };
+
     return (
         <UserContext.Provider
-            value={{ users, loggedinUser, userLogin, isLoggedin, userLogout }}
+            value={{
+                users,
+                loggedinUser,
+                userLogin,
+                isLoggedin,
+                userLogout,
+                addUser,
+            }}
         >
             {children}
         </UserContext.Provider>
