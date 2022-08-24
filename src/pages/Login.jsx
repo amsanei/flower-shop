@@ -3,18 +3,21 @@ import UserContext from "../context/UserContext";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [formData, setFormData] = useState({
+        username: "",
+        password: "",
+    });
+    const { username, password } = formData;
 
     const { users, userLogin } = useContext(UserContext);
 
     const navigate = useNavigate();
 
-    const usernameChange = (e) => {
-        setUsername(e.target.value);
-    };
-    const passwordChange = (e) => {
-        setPassword(e.target.value);
+    const onChange = (e) => {
+        setFormData((prevState) => ({
+            ...prevState,
+            [e.target.id]: e.target.value,
+        }));
     };
 
     const login = (e) => {
@@ -36,13 +39,13 @@ export default function Login() {
         <div>
             <form onSubmit={login}>
                 <input
-                    onChange={usernameChange}
+                    onChange={onChange}
                     value={username}
                     type="text"
                     id="username"
                 />
                 <input
-                    onChange={passwordChange}
+                    onChange={onChange}
                     value={password}
                     type="password"
                     id="password"
