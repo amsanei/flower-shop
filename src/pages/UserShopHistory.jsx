@@ -12,7 +12,7 @@ export default function UserShopHistory() {
     return (
         <div>
             {userShopHistory.map((item) => (
-                <UserShopHistoryList data={item} />
+                <UserShopHistoryList key={item.id} data={item} />
             ))}
         </div>
     );

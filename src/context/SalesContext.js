@@ -5,6 +5,7 @@ const SalesContext = createContext();
 export const SalesProvider = ({ children }) => {
     const [salesHistory, setSalesHistory] = useState([
         {
+            id: "asfas46a4s",
             userId: "1a2a1a",
             products: [{ id: "agww32", count: 10 }],
             date: "2022/24/8",
