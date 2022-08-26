@@ -2,7 +2,9 @@
 
 :root {
     --color-prime: #ff8f52;
+    --color-prime-darker: #cd5d20;
     --color-text-prime: #121212;
+    --color-text-second: #838383;
 }
 
 body {
@@ -19,7 +21,7 @@ body {
 }
 
 .header {
-    width: 90%;
+    width: 85%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -64,4 +66,66 @@ body {
 .header-icons a {
     color: var(--color-prime);
     font-size: 24px;
+}
+
+/* Hero  */
+
+.home-hero {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.home-hero-content-title {
+    font-size: 60px;
+    line-height: 1.4;
+}
+
+.home-hero-content-dec {
+    margin-bottom: 20px;
+    color: var(--color-text-second);
+    font-size: 20px;
+}
+
+.home-hero-slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.home-hero-slider img {
+    width: 192px;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ui components  */
+
+.btn {
+    margin: 0;
+    padding: 8px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-prime {
+    color: #fff;
+    background-color: var(--color-prime);
+    border: none;
+    transition: background-color 0.5s;
+}
+
+.btn-prime:hover {
+    background-color: var(--color-prime-darker);
 }
