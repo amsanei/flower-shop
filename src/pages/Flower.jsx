@@ -2,7 +2,7 @@ import { useContext } from "react";
 import FlowerContext from "../context/FlowerContext";
 import { useParams } from "react-router-dom";
 import FlowerDetail from "../components/FlowerDetail";
-import Header from "../components/Header";
+import Header from "../components/ui/Header";
 
 export default function Flower() {
     const { id } = useParams();
