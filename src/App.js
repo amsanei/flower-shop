@@ -1,3 +1,4 @@
+import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Flower from "./pages/Flower";
@@ -10,47 +11,51 @@ import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import UserPanel from "./pages/UserPanel";
 import { SalesProvider } from "./context/SalesContext";
-import UserShopHistory from './pages/UserShopHistory';
-import SignUp from './pages/SignUp';
+import UserShopHistory from "./pages/UserShopHistory";
+import SignUp from "./pages/SignUp";
+
 function App() {
     return (
-        <UserProvider>
-            <FlowerProvider>
-                <SalesProvider>
-                    <CartProvider>
-                        <Router>
-                            <Routes>
-                                <Route path="/" element={<Home />} />
-                                <Route
-                                    path="/flower/:id"
-                                    element={<Flower />}
-                                />
-                                <Route
-                                    path="/checkout"
-                                    element={<Checkout />}
-                                />
-                                <Route path="/cart" element={<Cart />} />
-                                <Route path="/login" element={<Login />} />
-                                <Route path="/Sign-up" element={<SignUp />} />
-                                <Route
-                                    path="/user-panel"
-                                    element={<PrivateRoute />}
-                                >
+            <UserProvider>
+                <FlowerProvider>
+                    <SalesProvider>
+                        <CartProvider>
+                            <Router>
+                                <Routes>
+                                    <Route path="/" element={<Home />} />
+                                    <Route
+                                        path="/flower/:id"
+                                        element={<Flower />}
+                                    />
+                                    <Route
+                                        path="/checkout"
+                                        element={<Checkout />}
+                                    />
+                                    <Route path="/cart" element={<Cart />} />
+                                    <Route path="/login" element={<Login />} />
+                                    <Route
+                                        path="/Sign-up"
+                                        element={<SignUp />}
+                                    />
                                     <Route
                                         path="/user-panel"
-                                        element={<UserPanel />}
-                                    />
-                                    <Route
-                                        path="/user-panel/shop-history"
-                                        element={<UserShopHistory />}
-                                    />
-                                </Route>
-                            </Routes>
-                        </Router>
-                    </CartProvider>
-                </SalesProvider>
-            </FlowerProvider>
-        </UserProvider>
+                                        element={<PrivateRoute />}
+                                    >
+                                        <Route
+                                            path="/user-panel"
+                                            element={<UserPanel />}
+                                        />
+                                        <Route
+                                            path="/user-panel/shop-history"
+                                            element={<UserShopHistory />}
+                                        />
+                                    </Route>
+                                </Routes>
+                            </Router>
+                        </CartProvider>
+                    </SalesProvider>
+                </FlowerProvider>
+            </UserProvider>
     );
 }
 
