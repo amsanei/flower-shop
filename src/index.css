@@ -5,6 +5,7 @@
     --color-prime-darker: #cd5d20;
     --color-text-prime: #121212;
     --color-text-second: #838383;
+    --color-border: #d9d9d9;
 }
 
 body {
@@ -128,4 +129,70 @@ body {
 
 .btn-prime:hover {
     background-color: var(--color-prime-darker);
+}
+
+/* home section  */
+
+.home-section {
+    width: 85%;
+    margin: 10px auto;
+}
+
+.home-section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.home-section-title::after,
+.home-section-title::before {
+    content: "---------------";
+    letter-spacing: -1px;
+    color: var(--color-border);
+    margin: 20px;
+}
+
+.home-section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* card */
+.card-product {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card-product-img img {
+    width: 265px;
+    height: 235px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card-product-title {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.card-product-footer {
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-product-price {
+    color: var(--color-text-second);
+}
+
+.card-product-add-to-cart {
+    cursor: pointer;
+    color: var(--color-prime);
+    display: flex;
+    gap: 5px;
 }
