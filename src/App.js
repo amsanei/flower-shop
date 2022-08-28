@@ -13,49 +13,49 @@ import UserPanel from "./pages/UserPanel";
 import { SalesProvider } from "./context/SalesContext";
 import UserShopHistory from "./pages/UserShopHistory";
 import SignUp from "./pages/SignUp";
+import Shop from "./pages/Shop";
 
 function App() {
     return (
-            <UserProvider>
-                <FlowerProvider>
-                    <SalesProvider>
-                        <CartProvider>
-                            <Router>
-                                <Routes>
-                                    <Route path="/" element={<Home />} />
-                                    <Route
-                                        path="/flower/:id"
-                                        element={<Flower />}
-                                    />
-                                    <Route
-                                        path="/checkout"
-                                        element={<Checkout />}
-                                    />
-                                    <Route path="/cart" element={<Cart />} />
-                                    <Route path="/login" element={<Login />} />
-                                    <Route
-                                        path="/Sign-up"
-                                        element={<SignUp />}
-                                    />
+        <UserProvider>
+            <FlowerProvider>
+                <SalesProvider>
+                    <CartProvider>
+                        <Router>
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route
+                                    path="/flower/:id"
+                                    element={<Flower />}
+                                />
+                                <Route
+                                    path="/checkout"
+                                    element={<Checkout />}
+                                />
+                                <Route path="/cart" element={<Cart />} />
+                                <Route path="/login" element={<Login />} />
+                                <Route path="/Sign-up" element={<SignUp />} />
+                                <Route path="/shop" element={<Shop />} />
+
+                                <Route
+                                    path="/user-panel"
+                                    element={<PrivateRoute />}
+                                >
                                     <Route
                                         path="/user-panel"
-                                        element={<PrivateRoute />}
-                                    >
-                                        <Route
-                                            path="/user-panel"
-                                            element={<UserPanel />}
-                                        />
-                                        <Route
-                                            path="/user-panel/shop-history"
-                                            element={<UserShopHistory />}
-                                        />
-                                    </Route>
-                                </Routes>
-                            </Router>
-                        </CartProvider>
-                    </SalesProvider>
-                </FlowerProvider>
-            </UserProvider>
+                                        element={<UserPanel />}
+                                    />
+                                    <Route
+                                        path="/user-panel/shop-history"
+                                        element={<UserShopHistory />}
+                                    />
+                                </Route>
+                            </Routes>
+                        </Router>
+                    </CartProvider>
+                </SalesProvider>
+            </FlowerProvider>
+        </UserProvider>
     );
 }
 
