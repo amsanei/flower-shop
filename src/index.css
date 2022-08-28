@@ -179,6 +179,11 @@ body {
     font-size: 22px;
 }
 
+.card-product-title a{
+    color: var(--color-text-prime);
+    text-decoration: none;
+}
+
 .card-product-footer {
     margin-top: 30px;
     font-size: 18px;
@@ -195,4 +200,13 @@ body {
     color: var(--color-prime);
     display: flex;
     gap: 5px;
+}
+
+/* Shop page  */
+
+.shop-products {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    gap: 25px;
 }

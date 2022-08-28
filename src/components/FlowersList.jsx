@@ -10,10 +10,10 @@ export default function FlowersList() {
     }
 
     return (
-        <main>
+        <div className="shop-products">
             {flowers.map((flower) => (
                 <Flower key={flower.id} flower={flower} />
             ))}
-        </main>
+        </div>
     );
 }
