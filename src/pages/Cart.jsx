@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CartItem from "../components/CartItem";
-import Header from "../components/ui/Header";
+import Header from "../components/layout/Header";
 import CartContext from "../context/CartContext";
 
 export default function Cart() {
