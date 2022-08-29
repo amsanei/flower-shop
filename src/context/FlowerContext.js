@@ -8,7 +8,7 @@ const flowers_data = [
         imgUrl: "https://images.unsplash.com/photo-1593026238161-ac5f86e5ef79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         name: "Sun Flower",
         Price: 2000,
-        inStock: 5,
+        inStock: 1,
         description:
             "Description is the pattern of narrative development that aims to make vivid a place, object, character, or group.",
     },
@@ -17,7 +17,7 @@ const flowers_data = [
         imgUrl: "https://images.unsplash.com/photo-1563601841845-74a0a8ab7c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
         name: "Daisy",
         Price: 1000,
-        inStock: 5,
+        inStock: 1,
         description:
             "Description is the pattern of narrative development that aims to make vivid a place, object, character, or group.",
     },
