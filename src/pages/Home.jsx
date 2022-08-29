@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/layout/Header";
 import HomeHero from "../components/layout/HomeHero";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default class Home extends Component {
     render() {
@@ -74,6 +74,116 @@ export default class Home extends Component {
                                 <div className="card-product-add-to-cart">
                                     <FontAwesomeIcon icon={faCartShopping} />
                                     Add to cart
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="home-section">
+                    <div className="home-section-title">Testimonials</div>
+                    <div className="home-section-content">
+                        <div className="card-testimonial">
+                            <div>
+                                <img
+                                    className="card-testimonial-img"
+                                    src="https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="card-testimonial-content">
+                                <div className="card-testimonial-name">
+                                    Atena
+                                </div>
+                                <div className="card-testimonial-text">
+                                    i’m buying flower from them every weak,
+                                    always fresh flowers and beutiful😍🌻...
+                                    love’em so nuch..keep going 💯💯
+                                </div>
+
+                                <div className="card-testimonial-rate">
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <FontAwesomeIcon icon={faStar} />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-testimonial">
+                            <div>
+                                <img
+                                    className="card-testimonial-img"
+                                    src="https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="card-testimonial-content">
+                                <div className="card-testimonial-name">
+                                    Atena
+                                </div>
+                                <div className="card-testimonial-text">
+                                    i’m buying flower from them every weak,
+                                    always fresh flowers and beutiful😍🌻...
+                                    love’em so nuch..keep going 💯💯
+                                </div>
+
+                                <div className="card-testimonial-rate">
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <FontAwesomeIcon icon={faStar} />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-testimonial">
+                            <div>
+                                <img
+                                    className="card-testimonial-img"
+                                    src="https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="card-testimonial-content">
+                                <div className="card-testimonial-name">
+                                    Atena
+                                </div>
+                                <div className="card-testimonial-text">
+                                    i’m buying flower from them every weak,
+                                    always fresh flowers and beutiful😍🌻...
+                                    love’em so nuch..keep going 💯💯
+                                </div>
+
+                                <div className="card-testimonial-rate">
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <span className="active">
+                                        <FontAwesomeIcon icon={faStar} />
+                                    </span>
+                                    <FontAwesomeIcon icon={faStar} />
                                 </div>
                             </div>
                         </div>
