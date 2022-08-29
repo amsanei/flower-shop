@@ -6,11 +6,27 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (item) => {
-        const cartItem = {
-            ...item,
-            count: 1,
-        };
-        setCartItems([...cartItems, cartItem]);
+        let isIn = false;
+        if (cartItems.length > 0) {
+            cartItems.map((e) => {
+                if (e.id === item.id) isIn = true;
+            });
+            if (isIn) {
+                increaseCount(item.id);
+            } else {
+                const cartItem = {
+                    ...item,
+                    count: 1,
+                };
+                setCartItems([...cartItems, cartItem]);
+            }
+        } else {
+            const cartItem = {
+                ...item,
+                count: 1,
+            };
+            setCartItems([...cartItems, cartItem]);
+        }
     };
 
     const removeFromCart = (itemId) => {

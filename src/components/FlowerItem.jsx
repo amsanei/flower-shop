@@ -10,10 +10,7 @@ export default function FlowerItem(props) {
     return (
         <div className="card-product">
             <div className="card-product-img">
-                <img
-                    src="https://images.unsplash.com/photo-1593026238161-ac5f86e5ef79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                    alt=""
-                />
+                <img src={flower.imgUrl} alt={flower.name} />
             </div>
             <h1 className="card-product-title">
                 <Link to={`/flower/${flower.id}`}>{flower.name}</Link>
