@@ -246,7 +246,7 @@ body {
 
 .auth-form-dec {
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--color-text-second);
 }
 
@@ -268,7 +268,7 @@ body {
     gap: 10px;
 }
 
-.btn-login {
+.btn-auth {
     margin-top: 50px;
     width: 100%;
     padding: 15px 10px;

@@ -74,13 +74,13 @@ export default function Login() {
                         />
                     </div>
                     <input
-                        className="btn btn-prime btn-login"
+                        className="btn btn-prime btn-auth"
                         type="submit"
                         value="Login"
                     />
                 </form>
                 <div className="auth-form-footer">
-                    Don't have a account? <Link to="/sign-up">Sign Up</Link>
+                    Don't have an account? <Link to="/sign-up">Sign Up</Link>
                 </div>
             </div>
             <div className="auth-img">
