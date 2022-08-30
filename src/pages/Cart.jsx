@@ -6,6 +6,16 @@ import CartContext from "../context/CartContext";
 export default function Cart() {
     const { cartItems, removeFromCart, reduceCount, increaseCount } =
         useContext(CartContext);
+    let totalPrice = 0;
+    cartItems.map((item) => (totalPrice += item.Price * item.count));
+    if (cartItems.length === 0) {
+        return (
+            <>
+                <Header />
+                <div>your cart is empty</div>
+            </>
+        );
+    }
     return (
         <>
             <Header />
@@ -19,6 +29,10 @@ export default function Cart() {
                         increase={increaseCount}
                     />
                 ))}
+            </div>
+            <div>
+                <div>your total is {totalPrice}</div>
+                <button>Checkout</button>
             </div>
         </>
     );
