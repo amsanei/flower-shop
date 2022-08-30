@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
 
     const reduceCount = (itemId) => {
         const updatedItem = cartItems.find((item) => item.id === itemId);
-        if (updatedItem.count === 0) {
+        if (updatedItem.count === 1) {
             removeFromCart(itemId);
         } else {
             updatedItem.count -= 1;
