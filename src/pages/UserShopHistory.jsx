@@ -2,6 +2,7 @@ import { useContext } from "react";
 import UserShopHistoryList from "../components/UserShopHistoryList";
 import SalesContext from "../context/SalesContext";
 import UserContext from "../context/UserContext";
+import Header from "../components/layout/Header";
 
 export default function UserShopHistory() {
     const { loggedinUser } = useContext(UserContext);
@@ -11,6 +12,7 @@ export default function UserShopHistory() {
 
     return (
         <div>
+            <Header />
             {userShopHistory.map((item) => (
                 <UserShopHistoryList key={item.id} data={item} />
             ))}

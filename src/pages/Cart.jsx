@@ -2,6 +2,7 @@ import { useContext } from "react";
 import CartItem from "../components/CartItem";
 import Header from "../components/layout/Header";
 import CartContext from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
     const { cartItems, removeFromCart, reduceCount, increaseCount } =
@@ -32,7 +33,7 @@ export default function Cart() {
             </div>
             <div>
                 <div>your total is {totalPrice}</div>
-                <button>Checkout</button>
+                <Link to="/checkout">Checkout</Link>
             </div>
         </>
     );

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import FlowerContext from "../context/FlowerContext";
 
 export default function UserShopHistoryList(props) {
-    const { date, products } = props.data;
+    const { date, products, state } = props.data;
     const { getFlower } = useContext(FlowerContext);
     const getShopHistoryProduct = (id, count) => {
         return { product: getFlower(id), count };
@@ -23,6 +23,7 @@ export default function UserShopHistoryList(props) {
                     ))}
                 </ul>
             </div>
+            <div>State: {state}</div>
         </div>
     );
 }
