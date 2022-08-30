@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from 'react-router-dom';
 
 export default function HomeHero() {
     return (
@@ -11,7 +11,9 @@ export default function HomeHero() {
                 <div className="home-hero-content-dec">
                     Browse between hounders of flowers
                 </div>
-                <button className="btn btn-prime">Browse</button>
+                <Link to="/shop">
+                    <button className="btn btn-prime">Browse</button>
+                </Link>
             </div>
             <div className="home-hero-slider">
                 <div className="home-hero-slider-img">

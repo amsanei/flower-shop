@@ -20,9 +20,6 @@ export default function Header() {
                         <Link to="/shop">Shop</Link>
                     </li>
                     <li>
-                        <Link to="/Blog">Blog</Link>
-                    </li>
-                    <li>
                         <Link to="/About">About</Link>
                     </li>
                 </ul>

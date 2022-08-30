@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Flower from "./pages/Flower";
 import Checkout from "./pages/Checkout";
 import Cart from "./pages/Cart";
+import About from "./pages/About";
 import { UserProvider } from "./context/UserContext";
 import { FlowerProvider } from "./context/FlowerContext";
 import { CartProvider } from "./context/CartContext";
@@ -33,6 +34,7 @@ function App() {
                                     element={<Checkout />}
                                 />
                                 <Route path="/cart" element={<Cart />} />
+                                <Route path="/about" element={<About />} />
                                 <Route path="/login" element={<Login />} />
                                 <Route path="/Sign-up" element={<SignUp />} />
                                 <Route path="/shop" element={<Shop />} />
