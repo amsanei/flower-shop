@@ -124,6 +124,12 @@ body {
     border-radius: 5px;
 }
 
+.btn-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .btn-prime {
     color: #fff;
     background-color: var(--color-prime);
@@ -133,6 +139,23 @@ body {
 
 .btn-prime:hover {
     background-color: var(--color-prime-darker);
+}
+
+.btn-second {
+    color: var(--color-prime);
+    background-color: #fff;
+    border: 2px solid var(--color-prime);
+    transition: color 0.5s;
+}
+
+.btn-second:hover {
+    color: var(--color-prime-darker);
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* home section  */
@@ -241,7 +264,7 @@ body {
     margin-top: 10px;
     display: flex;
     gap: 5px;
-    color: var(--color-border)
+    color: var(--color-border);
 }
 
 .card-testimonial-rate .active {
@@ -344,4 +367,51 @@ body {
     padding: 15px 10px;
     border-radius: 5px;
     border: 1px solid var(--color-border);
+}
+
+/* Flower page  */
+
+.flower-container {
+    width: 85%;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.flower-img img {
+    width: 356px;
+    height: 326px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.flower-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flower-title {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.flower-desc {
+    color: var(--color-text-second);
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.flower-info-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.flower-price {
+    font-size: 22px;
 }
