@@ -20,20 +20,30 @@ export default function Cart() {
     return (
         <>
             <Header />
-            <div>
-                {cartItems.map((item) => (
-                    <CartItem
-                        key={item.id}
-                        flower={item}
-                        remove={removeFromCart}
-                        reduce={reduceCount}
-                        increase={increaseCount}
-                    />
-                ))}
-            </div>
-            <div>
-                <div>your total is {totalPrice}</div>
-                <Link to="/checkout">Checkout</Link>
+            <div className="cart-container">
+                <div className="cart-items-container">
+                    <div className="cart-items-title">Your cart</div>
+                    <div className="cart-items">
+                        {cartItems.map((item) => (
+                            <CartItem
+                                key={item.id}
+                                flower={item}
+                                remove={removeFromCart}
+                                reduce={reduceCount}
+                                increase={increaseCount}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className="cart-checkout">
+                    <div>
+                        Subtotal for <strong>{cartItems.length}</strong> item(s) :{" "}
+                        <strong>{totalPrice} $</strong>
+                    </div>
+                    <button className="btn btn-prime cart-checkout-btn">
+                        <Link to="/checkout">Checkout</Link>
+                    </button>
+                </div>
             </div>
         </>
     );

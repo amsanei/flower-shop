@@ -1,19 +1,37 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 export default function CartItem(props) {
     const { flower, remove, reduce, increase } = props;
 
     return (
-        <div className="flower">
-            <Link to={`/flower/${flower.id}`}>
-                <h1 className="flower-title">{flower.name}</h1>
-            </Link>
-            <p className="flower-desc">{flower.description}</p>
-            <div className="flower-price">{flower.Price}</div>
-            <button onClick={() => remove(flower.id)}>Remove</button>
-            <div>
-                <button onClick={() => reduce(flower.id)}>-</button>
-                <span>{flower.count}</span>
-                <button onClick={() => increase(flower.id)}>+</button>
+        <div className="cart-item">
+            <div className="cart-item-img">
+                <img src={flower.imgUrl} alt={flower.name} />
+            </div>
+            <div className="cart-item-remove" onClick={() => remove(flower.id)}>
+                <FontAwesomeIcon icon={faTrashCan} />
+            </div>
+            <div className="cart-item-title">
+                <Link to={`/flower/${flower.id}`}>{flower.name}</Link>
+            </div>
+            <div className="cart-item-footer">
+                <div className="cart-item-price">{flower.Price} $</div>
+                <div className="cart-item-count-container">
+                    <span
+                        className="cart-item-count-inc"
+                        onClick={() => reduce(flower.id)}
+                    >
+                        -
+                    </span>
+                    <span className="cart-item-count">{flower.count}</span>
+                    <span
+                        className="cart-item-count-dec"
+                        onClick={() => increase(flower.id)}
+                    >
+                        +
+                    </span>
+                </div>
             </div>
         </div>
     );
