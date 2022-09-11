@@ -608,3 +608,23 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+.user-panel-body {
+    width: 80%;
+}
+
+.user-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.user-panel-header {
+    font-size: 24px;
+}
+
+.user-panel-content {
+    padding: 20px 30px;
+}

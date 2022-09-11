@@ -1,31 +1,35 @@
 import { useContext } from "react";
 import UserContext from "../../context/UserContext";
 import SalesContext from "../../context/SalesContext";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../../components/layout/Header";
 import Sidebar from "./Sidebar";
 
 export default function Dashboard() {
-    const { loggedinUser, userLogout } = useContext(UserContext);
+    const { loggedinUser } = useContext(UserContext);
 
     const { getUserShopHistory } = useContext(SalesContext);
 
     const userShopHistory = getUserShopHistory(loggedinUser.id);
-    
+
     return (
         <>
             <Header />
             <div className="user-panel">
                 <Sidebar />
-                <div>
-                    {/* <p>Hello {loggedinUser.username}</p> */}
-                    <div className="shop-history">
-                        <div>you shoped {userShopHistory.length} time</div>
-                        <Link to="/user-panel/shop-history">
-                            my shoping history
-                        </Link>
+                <div className="user-panel-body">
+                    <div className="user-panel-header">
+                        <div className="user-panel-header-title">Dashbaord</div>
                     </div>
-                    <Link to="/">Home</Link>
+                    <div className="user-panel-content">
+                        <div className="shop-history">
+                            <div>you shoped {userShopHistory.length} time</div>
+                            <Link to="/user-panel/shop-history">
+                                my shoping history
+                            </Link>
+                        </div>
+                        <Link to="/">Home</Link>
+                    </div>
                 </div>
             </div>
         </>
