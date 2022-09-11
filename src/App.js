@@ -10,7 +10,7 @@ import { FlowerProvider } from "./context/FlowerContext";
 import { CartProvider } from "./context/CartContext";
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
-import UserPanel from "./pages/UserPanel";
+import Dashboard from "./pages/userPanel/Dashboard";
 import { SalesProvider } from "./context/SalesContext";
 import UserShopHistory from "./pages/UserShopHistory";
 import SignUp from "./pages/SignUp";
@@ -49,7 +49,7 @@ function App() {
                                 >
                                     <Route
                                         path="/user-panel"
-                                        element={<UserPanel />}
+                                        element={<Dashboard />}
                                     />
                                     <Route
                                         path="/user-panel/shop-history"

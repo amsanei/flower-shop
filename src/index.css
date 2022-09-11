@@ -522,3 +522,13 @@ body {
     color: #fff;
     text-decoration: none;
 }
+
+/* USER PANEL */
+
+.user-panel {
+    margin: 40px auto;
+    background-color: #fff;
+    width: 85%;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
