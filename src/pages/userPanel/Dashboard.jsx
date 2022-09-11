@@ -6,22 +6,19 @@ import Header from "../../components/layout/Header";
 import Sidebar from "./Sidebar";
 
 export default function Dashboard() {
-    const navigate = useNavigate();
     const { loggedinUser, userLogout } = useContext(UserContext);
+
     const { getUserShopHistory } = useContext(SalesContext);
 
     const userShopHistory = getUserShopHistory(loggedinUser.id);
-    const logout = () => {
-        userLogout();
-        navigate("/login");
-    };
+    
     return (
         <>
             <Header />
             <div className="user-panel">
                 <Sidebar />
                 <div>
-                    <p>Hello {loggedinUser.username}</p>
+                    {/* <p>Hello {loggedinUser.username}</p> */}
                     <div className="shop-history">
                         <div>you shoped {userShopHistory.length} time</div>
                         <Link to="/user-panel/shop-history">
@@ -29,7 +26,6 @@ export default function Dashboard() {
                         </Link>
                     </div>
                     <Link to="/">Home</Link>
-                    <button onClick={logout}>Logout</button>
                 </div>
             </div>
         </>
