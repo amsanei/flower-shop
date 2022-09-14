@@ -13,8 +13,13 @@ export const UserProvider = ({ children }) => {
         },
     ]);
 
-    const [loggedinUser, setLoggedinUser] = useState({});
-    const [isLoggedin, setIsLoggedin] = useState(false);
+    const [loggedinUser, setLoggedinUser] = useState({
+        id: "1a2a1a",
+        username: "amir",
+        password: "amir12345",
+        email: "a@a.ir",
+    });
+    const [isLoggedin, setIsLoggedin] = useState(true);
 
     const userLogin = (userId) => {
         setLoggedinUser(users.find((user) => user.id === userId));

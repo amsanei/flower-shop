@@ -15,6 +15,7 @@ import { SalesProvider } from "./context/SalesContext";
 import UserShopHistory from "./pages/UserShopHistory";
 import SignUp from "./pages/SignUp";
 import Shop from "./pages/Shop";
+import UserInformation from "./pages/userPanel/UserInformation";
 
 function App() {
     return (
@@ -54,6 +55,10 @@ function App() {
                                     <Route
                                         path="/user-panel/shop-history"
                                         element={<UserShopHistory />}
+                                    />
+                                    <Route
+                                        path="/user-panel/information"
+                                        element={<UserInformation />}
                                     />
                                 </Route>
                             </Routes>
