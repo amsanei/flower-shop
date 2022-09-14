@@ -3,6 +3,7 @@ import CartItem from "../components/CartItem";
 import Header from "../components/layout/Header";
 import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
+import Footer from "../components/layout/Footer";
 
 export default function Cart() {
     const { cartItems, removeFromCart, reduceCount, increaseCount } =
@@ -14,6 +15,7 @@ export default function Cart() {
             <>
                 <Header />
                 <div>your cart is empty</div>
+                <Footer />
             </>
         );
     }
@@ -37,14 +39,15 @@ export default function Cart() {
                 </div>
                 <div className="cart-checkout">
                     <div>
-                        Subtotal for <strong>{cartItems.length}</strong> item(s) :{" "}
-                        <strong>{totalPrice} $</strong>
+                        Subtotal for <strong>{cartItems.length}</strong> item(s)
+                        : <strong>{totalPrice} $</strong>
                     </div>
                     <button className="btn btn-prime cart-checkout-btn">
                         <Link to="/checkout">Checkout</Link>
                     </button>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

@@ -4,6 +4,7 @@ import SalesContext from "../context/SalesContext";
 import CartContext from "../context/CartContext";
 import Header from "../components/layout/Header";
 import { Link } from "react-router-dom";
+import Footer from "../components/layout/Footer";
 
 export default function Checkout() {
     const { isLoggedin, loggedinUser } = useContext(UserContext);
@@ -20,6 +21,7 @@ export default function Checkout() {
                 <div>
                     <button onClick={() => newSale(userOrder)}>pay</button>
                 </div>
+                <Footer />
             </>
         );
     } else {
@@ -30,6 +32,7 @@ export default function Checkout() {
                     You have to first <Link to="/login">login</Link> or
                     <Link to="/login">sign up</Link>
                 </div>
+                <Footer />
             </>
         );
     }

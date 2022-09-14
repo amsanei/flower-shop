@@ -668,3 +668,84 @@ body {
 .data {
     font-size: 20px;
 }
+
+/* Footer */
+
+footer {
+    margin-top: 100px;
+    position: relative;
+    bottom: 0;
+    background-color: #e7e7e7;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.footer-card:first-child {
+    grid-column: span 2;
+}
+
+.footer-site-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-site-title span {
+    color: var(--color-prime);
+}
+
+.footer-site-decs {
+    max-width: 40ch;
+    line-height: 1.8;
+    color: var(--color-text-second);
+}
+
+.footer-card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 15px;
+}
+
+.footer-links a {
+    color: var(--color-text-second);
+    text-decoration: none;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icon-text {
+    display: flex;
+    gap: 10px;
+    color: var(--color-text-second);
+}
+
+.footer-byline {
+    width: 50%;
+    margin: auto;
+    border-top: 2px solid var(--color-border);
+    text-align: center;
+    padding: 10px;
+    color: var(--color-text-second);
+    font-size: 14px;
+}
+
+.footer-byline a {
+    color: var(--color-prime);
+}

@@ -3,6 +3,7 @@ import Header from "../components/layout/Header";
 import HomeHero from "../components/layout/HomeHero";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../components/layout/Footer";
 
 export default class Home extends Component {
     render() {
@@ -189,6 +190,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }
