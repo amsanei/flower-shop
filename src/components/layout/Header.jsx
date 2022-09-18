@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,22 +14,22 @@ export default function Header() {
                 </div>
                 <ul className="header-links">
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/shop">Shop</Link>
+                        <NavLink to="/shop">Shop</NavLink>
                     </li>
                     <li>
-                        <Link to="/About">About</Link>
+                        <NavLink to="/About">About</NavLink>
                     </li>
                 </ul>
                 <div className="header-icons">
-                    <Link to="/user-panel">
+                    <NavLink to="/user-panel">
                         <FontAwesomeIcon icon={faUser} />
-                    </Link>
-                    <Link to="/cart">
+                    </NavLink>
+                    <NavLink to="/cart">
                         <FontAwesomeIcon icon={faCartShopping} />
-                    </Link>
+                    </NavLink>
                 </div>
             </header>
         </div>
