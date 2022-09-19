@@ -422,6 +422,33 @@ body {
 
 /* Cart page */
 
+.cart-empty {
+    background-color: #fff;
+    width: 40%;
+    margin: 50px auto;
+    height: 50vh;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-empty-icon {
+    color: rgb(230, 230, 230);
+    font-size: 100px;
+}
+
+.cart-empty-text {
+    color: var(--color-text-second);
+}
+
+.cart-empty a {
+    color: var(--color-prime);
+    text-decoration: none;
+}
+
 .cart-container {
     width: 85%;
     margin: 20px auto;

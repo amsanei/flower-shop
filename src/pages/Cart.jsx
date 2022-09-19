@@ -4,6 +4,8 @@ import Header from "../components/layout/Header";
 import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
 import Footer from "../components/layout/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFaceFrown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cart() {
     const { cartItems, removeFromCart, reduceCount, increaseCount } =
@@ -14,7 +16,13 @@ export default function Cart() {
         return (
             <>
                 <Header />
-                <div>your cart is empty</div>
+                <div className="cart-empty">
+                    <div className="cart-empty-icon">
+                        <FontAwesomeIcon icon={faFaceFrown} />
+                    </div>
+                    <div className="cart-empty-text">Your cart is empty</div>
+                    <Link to="/shop">Shop</Link>
+                </div>
                 <Footer />
             </>
         );
