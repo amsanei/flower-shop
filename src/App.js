@@ -12,10 +12,10 @@ import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import Dashboard from "./pages/userPanel/Dashboard";
 import { SalesProvider } from "./context/SalesContext";
-import UserShopHistory from "./pages/UserShopHistory";
 import SignUp from "./pages/SignUp";
 import Shop from "./pages/Shop";
 import UserInformation from "./pages/userPanel/UserInformation";
+import UserOrders from "./pages/userPanel/UserOrders";
 
 function App() {
     return (
@@ -53,12 +53,12 @@ function App() {
                                         element={<Dashboard />}
                                     />
                                     <Route
-                                        path="/user-panel/shop-history"
-                                        element={<UserShopHistory />}
-                                    />
-                                    <Route
                                         path="/user-panel/information"
                                         element={<UserInformation />}
+                                    />
+                                    <Route
+                                        path="/user-panel/orders"
+                                        element={<UserOrders />}
                                     />
                                 </Route>
                             </Routes>
