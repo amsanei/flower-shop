@@ -588,8 +588,8 @@ body {
 }
 
 .sidebar-user-img img {
-    width: 78px;
-    height: 78px;
+    width: 48px;
+    height: 48px;
     object-fit: cover;
     border-radius: 100%;
 }
@@ -598,14 +598,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-.sidebar-user-name {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .sidebar-user-logout {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-text-second);
     cursor: pointer;
 }

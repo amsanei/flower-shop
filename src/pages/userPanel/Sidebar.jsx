@@ -23,13 +23,13 @@ export default function Sidebar() {
             <div className="sidebar-user-info-container">
                 <div className="sidebar-user-img">
                     <img
-                        src="https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                        src={loggedinUser.imageUrl}
                         alt=""
                     />
                 </div>
                 <div className="sidebar-user-info">
                     <div className="sidebar-user-name">
-                        {loggedinUser.username}
+                        {loggedinUser.fullName}
                     </div>
                     <div className="sidebar-user-logout" onClick={logout}>
                         Log out
