@@ -830,3 +830,54 @@ footer {
 .footer-byline a {
     color: var(--color-prime);
 }
+
+/* Modal */
+
+.modal-mask {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2); /* Black w/ opacity */
+}
+
+.modal-show {
+    display: flex;
+}
+
+.modal {
+    width: 25%;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: var(--color-text-second);
+}
+
+.modal-icon {
+    font-size: 64px;
+    color: var(--color-border);
+}
+
+.modal a {
+    text-decoration: none;
+    color: var(--color-prime);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
