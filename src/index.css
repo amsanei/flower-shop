@@ -373,6 +373,15 @@ body {
     border: 1px solid var(--color-border);
 }
 
+.input-user-info {
+    width: 70%;
+    font-size: 16px;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    background-color: #fff;
+}
+
 /* Flower page  */
 
 .flower-container {
